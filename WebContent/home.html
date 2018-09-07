@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+    <title>Search Feature - Angularjs app</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" ></script>
+</head>
+<body>
+    <div id="content" ng-controller="MainCtrl">
+
+        <input type='text' ng-model='searchText' placeholder="Search... " />
+
+            <ul>
+                <li ng-repeat='person in people | filter:searchText'> {{person.name}} </li>
+            </ul>
+
+    </div>
+
+<footer class="author">
+  <a> Search feature </a>
+</footer>
+</body>
+</html>
